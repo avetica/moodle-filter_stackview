@@ -32,5 +32,5 @@ $plugin->component = 'filter_stackview';
 $plugin->maturity = MATURITY_STABLE;
 $plugin->release = '4.3.0';
 $plugin->dependencies = [
-    'mod_stackview'    => 2022050600,
+    'mod_stackview' => 2022050600,
 ];
