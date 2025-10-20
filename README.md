@@ -9,7 +9,7 @@ This filter converts stackview `[[stackview 3]]` shortcode to an iframe.
 
 ##### Tested in:
 
-![moodle43](https://img.shields.io/badge/moodle-4.3-green.svg)
+![moodle405](https://img.shields.io/badge/moodle-4.5-blue.svg)
 ![moodle394](https://img.shields.io/badge/moodle-3.94-green.svg)
 ![moodle403](https://img.shields.io/badge/moodle-4.3-green.svg)
 ![workplace311](https://img.shields.io/badge/workplace-3.11-blue.svg)
@@ -25,22 +25,28 @@ This filter converts stackview `[[stackview 3]]` shortcode to an iframe.
 2. Login as administrator
 3. Go to Site Administrator > Notification
 4. Install the plugin
-5. Enabled the filter on global level `/admin/filters.php`.
+5. Enable the filter on global level `/admin/filters.php`.
 
 ##### Requirements:
 
-* Recommended Moodle version: **4.3 Moodle**
-* Recommended PHP version: **8.0**
+* Recommended Moodle version: **4.5**
+* Recommended PHP version: **8.1**
 * Required Moodle version: **4.3 Moodle**
 * Required PHP version: **8.0**
 
 ---
 ### Changelog
 
+##### 4.5.0 (18.10.2025)
+* Moodle 4.5 compatibility
+* Added type hints to all methods
+* Updated PHPDoc blocks to modern standards
+* Improved code quality and compliance
+
 ##### 4.3 (Apr 15, 2024)
 * Update/tested in Moodle 4.3
 
-##### 3.9 (09.05.2021)
+##### 3.9.0 (09.05.2021)
 * Original release 
 
 ---
@@ -58,7 +64,7 @@ the [LICENSE](LICENSE.md) file.
 
 <img src="https://avetica.nl/logo.svg" alt="avetica logo" width="250px">
 
-Copyright © 2021 Avetica :: [avetica.nl](https://avetica.nl/)
+Copyright © 2025 Avetica :: [avetica.nl](https://avetica.nl/)
 
 ##### Author:
 * Luuk Verhoeven :: [Ldesign Media](https://ldesignmedia.nl/) - [luuk@ldesignmedia.nl](luuk@ldesignmedia.nl)
