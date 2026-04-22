@@ -1,0 +1,18 @@
+## Gitlab CI/CD template for Moodle plugins By Ldesign Media.
+## Author: Hamza Tamyachte
+## Copyright 16/09/2024 Mfreak.nl | LdesignMedia.nl - Luuk Verhoeven
+
+include:
+  - remote: https://raw.githubusercontent.com/LdesignMedia/gitlab-ci/main/.gitlab-ci-template.yml
+
+moodle_405_stable:
+  stage: test
+  tags:
+    - deploy01.avetica.net
+  variables:
+    PHP_VERSION: "8.1"
+    ALLOW_ERRORS_MUSTACHE: "true"
+    ALLOW_ERRORS_GRUNT: "true"
+  before_script:
+    - export MOODLE_BRANCH=$MOODLE_BRANCH_LMS405
+  extends: .scriptshorttest

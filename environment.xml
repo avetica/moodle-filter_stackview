@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<COMPATIBILITY_MATRIX>
+    <PLUGIN name="filter_stackview">
+        <PHP version="8.0" level="required"/>
+    </PLUGIN>
+</COMPATIBILITY_MATRIX>

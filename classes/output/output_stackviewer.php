@@ -63,9 +63,9 @@ class output_stackviewer implements renderable, templatable {
      * @return object
      * @throws \coding_exception
      */
-    public function export_for_template(renderer_base $output) : object {
+    public function export_for_template(renderer_base $output): object {
 
-        return (object)[
+        return (object) [
             'width' => '600',
             'height' => '400',
             'url' => (new \moodle_url('/mod/stackview/view.php', [
@@ -74,4 +74,5 @@ class output_stackviewer implements renderable, templatable {
             ]))->out(false),
         ];
     }
+
 }

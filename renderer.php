@@ -30,10 +30,9 @@ class filter_stackview_renderer extends plugin_renderer_base {
      *
      * @param int $id
      *
-     * @return bool|string
-     * @throws moodle_exception
+     * @return string
      */
-    public function render_stack(int $id) {
+    public function render_stack(int $id): string {
         $context = (new \filter_stackview\output\output_stackviewer($id))
             ->export_for_template($this);
 

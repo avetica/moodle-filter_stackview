@@ -17,61 +17,20 @@
 /**
  * Class filter stackview.
  *
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * This class is kept for backward compatibility with Moodle versions prior to 4.5.
+ * For Moodle 4.5+, the filter has been moved to classes/text_filter.php
+ * with the namespace \filter_stackview\text_filter as required by MDL-82427.
  *
- * @package   filter_stackview
- * @copyright 10/05/2021 Mfreak.nl | LdesignMedia.nl - Luuk Verhoeven
- * @author    Luuk Verhoeven
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ *
+ * @package    filter_stackview
+ * @copyright  10/05/2021 Mfreak.nl | LdesignMedia.nl - Luuk Verhoeven
+ * @author     Luuk Verhoeven
+ * @deprecated since Moodle 4.5
  */
-class filter_stackview extends moodle_text_filter {
 
-    /**
-     * Apply the filter to the text.
-     *
-     * @param string $text   to be processed by the text
-     * @param array $options filter options
-     *
-     * @return string text after processing
-     * @see filter_manager::apply_filter_chain()
-     */
-    public function filter($text, array $options = []): string {
-        if (!isset($options['originalformat'])) {
-            // If the format is not specified, we are probably called by {@see format_string()}
-            // in that case, it would be dangerous to replace URL with the link because it could
-            // be stripped. therefore, we do nothing.
-            return $text;
-        }
+defined('MOODLE_INTERNAL') || die();
 
-        if (!is_string($text) || empty($text)) {
-            // Non string data can not be filtered anyway.
-            return $text;
-        }
+debugging('This file is no longer required in Moodle 4.5+. Please do not include/require it.', DEBUG_DEVELOPER);
 
-        // Regex.
-        preg_match_all('#\[\[(stackview)+\ (\d+)\]\]#s', $text, $matches, PREG_SET_ORDER);
-
-        // Check regex.
-        foreach ($matches as $match) {
-            $text = $this->stackview($match, $text);
-        }
-
-        return $text;
-    }
-
-    /**
-     * Replace with stackview.
-     *
-     * @param array $match
-     * @param string $text
-     *
-     * @return array|string|string[]
-     */
-    private function stackview(array $match, string $text) {
-        global $PAGE;
-        $renderer = $PAGE->get_renderer('filter_stackview');
-
-        return str_replace('[[stackview ' . $match[2] . ']]', $renderer->render_stack($match[2]),
-            $text);
-    }
-
-}
+class_alias(\filter_stackview\text_filter::class, 'filter_stackview');

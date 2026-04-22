@@ -26,11 +26,11 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version = 2022102600;
-$plugin->requires = 2018052700;
+$plugin->version = 2025101800;
+$plugin->requires = 2018052700; // Moodle 3.5 minimum.
 $plugin->component = 'filter_stackview';
 $plugin->maturity = MATURITY_STABLE;
 $plugin->release = '4.3.0';
 $plugin->dependencies = [
-    'mod_stackview'    => 2022050600,
+    'mod_stackview' => 2022050600,
 ];
